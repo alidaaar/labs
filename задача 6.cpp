@@ -2,7 +2,7 @@
 
 void removeBlock(int arr[], int& size, int startIndex, int blockSize) {
     if (startIndex < 0 || startIndex >= size || blockSize <= 0) {
-        std::cout << "Íåêîððåêòíûå ïàðàìåòðû óäàëåíèÿ áëîêà." << std::endl;
+        std::cout << "ÐÐµÐºÐ¾Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ Ð¿Ð°Ñ€Ð°Ð¼ÐµÑ‚Ñ€Ñ‹ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð±Ð»Ð¾ÐºÐ°." << std::endl;
         return;
     }
 
@@ -20,31 +20,31 @@ void removeBlock(int arr[], int& size, int startIndex, int blockSize) {
 int main() {
     setlocale(LC_ALL, "Russian");
     int size;
-    std::cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
     std::cin >> size;
 
     if (size <= 0) {
-        std::cout << "Ðàçìåð ìàññèâà äîëæåí áûòü ïîëîæèòåëüíûì." << std::endl;
+        std::cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð¿Ð¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼." << std::endl;
         return 1;
     }
 
     int* arr = new int[size];
 
-    std::cout << "Ââåäèòå ýëåìåíòû ìàññèâà:" << std::endl;
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << std::endl;
     for (int i = 0; i < size; i++) {
         std::cin >> arr[i];
     }
 
     int startIndex, blockSize;
-    std::cout << "Ââåäèòå èíäåêñ íà÷àëà áëîêà: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ Ð½Ð°Ñ‡Ð°Ð»Ð° Ð±Ð»Ð¾ÐºÐ°: ";
     std::cin >> startIndex;
 
-    std::cout << "Ââåäèòå ðàçìåð áëîêà äëÿ óäàëåíèÿ: ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð±Ð»Ð¾ÐºÐ° Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: ";
     std::cin >> blockSize;
 
     removeBlock(arr, size, startIndex, blockSize);
 
-    std::cout << "Ìàññèâ ïîñëå óäàëåíèÿ áëîêà:" << std::endl;
+    std::cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ Ð±Ð»Ð¾ÐºÐ°:" << std::endl;
     for (int i = 0; i < size; i++) {
         std::cout << arr[i] << " ";
     }
